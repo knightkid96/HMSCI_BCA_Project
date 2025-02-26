@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: left;
+        }
+        h1 {
+            color: #333;
+        }
+        .code-block {
+            background-color: #333;
+            color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Application Configuration</h1>
+        <p>This page represents the CodeIgniter index.php file as an HTML template.</p>
+        <div class="code-block">
+            // APPLICATION ENVIRONMENT <br>
+            define('ENVIRONMENT', 'production');<br><br>
+
+            // ERROR REPORTING <br>
+            switch (ENVIRONMENT) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;case 'development':<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error_reporting(E_ALL);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br><br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;case 'testing':<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;case 'production':<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error_reporting(0);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+            }
+        </div>
+
+        <h2>System Paths</h2>
+        <p>System folder: <strong>system</strong></p>
+        <p>Application folder: <strong>application</strong></p>
+
+        <h2>Default Controller</h2>
+        <p>Routing can be configured in <code>routes.php</code></p>
+
+        <div class="footer">
+            &copy; 2025 Tejas S | All rights reserved.
+        </div>
+    </div>
+
+</body>
+</html>
