@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment QR Code</title>
+</head>
+<body>
+    <h1>Scan the QR Code to make a payment</h1>
+    <div id="qrcode"></div>
+
+    <!-- Include the PayPal QR code script -->
+    <script src="https://paypal.me/knightkid96?country.x=IN&locale.x=en_GB"></script>
+
+    <script>
+        // Create a PayPal QR code
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '10.00' // The payment amount
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                // Payment completed, redirect or display a success message
+                alert('Payment successful!');
+            }
+        }).render('#qrcode');
+    </script>
+</body>
+</html>
